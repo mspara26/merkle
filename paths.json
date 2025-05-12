@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/merkle/:/",
-    "/content/merkle/configuration:/.helix/config.json",
-    "/content/merkle/metadata:/metadata.json"
+    "/content/merkle-xwalk/:/",
+    "/content/merkle-xwalk/configuration:/.helix/config.json",
+    "/content/merkle-xwalk/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/merkle/"
+    "/content/merkle-xwalk/"
   ]
 }
