@@ -12,21 +12,6 @@ import {
   loadCSS,
 } from './aem.js';
 
-/**
- * Move instrumentation attributes from a given element to another given element.
- * @param {Element} from the element to copy attributes from
- * @param {Element} to the element to copy attributes to
- */
-export function moveInstrumentation(from, to) {
-  moveAttributes(
-    from,
-    to,
-    [...from.attributes]
-      .map(({ nodeName }) => nodeName)
-      .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-')),
-  );
-}
-
 export function makeVideo(element, href) {
   // Set up the video and its source
   element.innerHTML = `
