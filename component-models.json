@@ -247,5 +247,47 @@
         "value": ""
       }
     ]
+  },
+  {
+    "id": "carousel-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "background image",
+        "label": "Background Image",
+        "multi": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "column image",
+        "label": "Column Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Card classes",
+        "description": "A list of CTA button types",
+        "options": [
+          {
+            "name": "Primary CTA",
+            "value": "primary"
+          },
+          {
+            "name": "Secondary CTA",
+            "value": "secondary"
+          }
+        ]
+      }
+    ]
   }
 ]
