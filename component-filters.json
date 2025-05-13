@@ -32,6 +32,7 @@
     "id": "carousel",
     "components": [
       "carousel-item"
+      "button"
     ]
   },
   {
