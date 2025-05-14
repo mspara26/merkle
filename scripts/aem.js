@@ -275,6 +275,30 @@ async function loadScript(src, attrs) {
 }
 
 /**
+ * Sanitizes a string for use as class name.
+ * @param {string} name The unsanitized string
+ * @returns {string} The class name
+ */
+function toClassName(name) {
+  return typeof name === 'string'
+    ? name
+      .toLowerCase()
+      .replace(/[^0-9a-z]/gi, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '')
+    : '';
+}
+
+/**
+ * Sanitizes a string for use as a js property name.
+ * @param {string} name The unsanitized string
+ * @returns {string} The camelCased name
+ */
+function toCamelCase(name) {
+  return toClassName(name).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+}
+
+/**
  * Retrieves the content of metadata tags.
  * @param {string} name The metadata name (or property)
  * @param {Document} doc Document object to query for metadata. Defaults to the window's document
